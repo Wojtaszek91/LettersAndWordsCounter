@@ -15,7 +15,7 @@ namespace LettersCounter
         static void Main(string[] args)
         {
             #region InitPhase
-            var url = "http://html-agility-pack.net/";
+            var url = "https://www.onet.pl/informacje/onetwiadomosci/magdalena-adamowicz-nowe-oswiadczenie-majatkowe-europoslanki-po/zvre484,79cfc278";
             HtmlDocument doc;
             var web = new HtmlWeb();
             Dictionary<string, int> words = new Dictionary<string, int>();
@@ -54,7 +54,9 @@ namespace LettersCounter
             .ToArray();
 
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("Counting words and letters for " + url);
+            Console.WriteLine("Counting words and letters for:");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(url);
             NodeModelUtilities.ConsoleWriteWhiteLine();
 
             if (filteredNodes.Length > 0)
